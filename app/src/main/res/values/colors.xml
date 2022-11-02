@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#6FD6CE</color>
+    <color name="teal_500">#39BDB7</color>
+    <color name="teal_700">#09BAB3</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- My color here. -->
+
+    <color name="red_light">#BF0A19</color>
+    <color name="red_night">#CF6679</color>
+    <color name="grayDark">#2A3740</color>
+    <color name="gray">#405059</color>
+
+    <color name="green_leaf">#2F7353</color>
+    <color name="green_transparent">#772F7353</color>
+    <color name="light_green">#68BF65</color>
+    <color name="light_green_secondary">#7DBF7A</color>
+    <color name="grayish_white">#D9D9D9</color>
+</resources>
