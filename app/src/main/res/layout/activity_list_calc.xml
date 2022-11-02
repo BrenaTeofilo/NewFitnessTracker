@@ -7,7 +7,7 @@
     tools:context=".ListCalcActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_calc"
+        android:id="@+id/rv_list_calc"
         android:background="@drawable/bg_fitness"
         tools:listitem="@android:layout/simple_list_item_1"
         android:layout_width="match_parent"

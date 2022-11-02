@@ -28,7 +28,7 @@ class ImcActivity : AppCompatActivity() {
 
         val btnSend: Button = findViewById(R.id.btn_imc_calc)
         btnSend.setOnClickListener {
-            if (!validate()){
+            if (!validateImc()){
                 Toast.makeText(this, R.string.fields_message, Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
@@ -78,7 +78,7 @@ class ImcActivity : AppCompatActivity() {
     }
 
     private fun openListActivity(){
-        val intent = Intent(this@ImcActivity, ListCalcActivity::class.java)
+        val intent = Intent(this, ListCalcActivity::class.java)
         intent.putExtra("type","imc" )
         startActivity(intent)
     }
@@ -100,7 +100,7 @@ class ImcActivity : AppCompatActivity() {
         return weight / ( (height / 100.0) * (height / 100.0) )
     }
 
-    private fun validate(): Boolean{
+    private fun validateImc(): Boolean{
         return (editWeight.text.toString().isNotEmpty()
                 && editHeight.text.toString().isNotEmpty()
                 && !editWeight.text.toString().startsWith("0")

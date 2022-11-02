@@ -35,31 +35,29 @@
             style="@style/editForm"
             android:hint="@string/age"/>
 
-        <RadioGroup
-            android:id="@+id/btn_ratio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="30dp">
+<!--        <RadioGroup-->
+<!--            android:id="@+id/btn_radio"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginBottom="30dp">-->
 
-            <RadioButton
-                android:id="@+id/btn_masculine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/masculine"
-                android:layout_marginEnd="10dp"
-                android:textSize="17sp"
-                android:onClick="onRadioButtonClicked" />
-            <RadioButton
-                android:id="@+id/btn_feminine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/feminine"
-                android:layout_marginStart="10dp"
-                android:textSize="17sp"
-                android:onClick="onRadioButtonClicked"/>
+<!--            <RadioButton-->
+<!--                android:id="@+id/btn_masculine"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/masculine"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:textSize="17sp"/>-->
+<!--            <RadioButton-->
+<!--                android:id="@+id/btn_feminine"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/feminine"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:textSize="17sp" />-->
 
-        </RadioGroup>
+<!--        </RadioGroup>-->
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/AutoTextViewForm"

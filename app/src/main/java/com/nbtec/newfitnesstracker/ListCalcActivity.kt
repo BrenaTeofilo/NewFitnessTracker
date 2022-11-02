@@ -1,5 +1,6 @@
 package com.nbtec.newfitnesstracker
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,13 +20,14 @@ class ListCalcActivity : AppCompatActivity() {
 
     private lateinit var rv: RecyclerView
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_calc)
 
         val result = mutableListOf<Calc>()
         val adapter = ListCalcAdapter(result)
-        rv = findViewById(R.id.list_calc)
+        rv = findViewById(R.id.rv_list_calc)
         rv.layoutManager = LinearLayoutManager(this)
         rv.adapter = adapter
 
@@ -38,7 +40,7 @@ class ListCalcActivity : AppCompatActivity() {
 
             runOnUiThread {
                 result.addAll(response)
-
+                adapter.notifyDataSetChanged()
             }
         }.start()
     }
@@ -63,9 +65,9 @@ class ListCalcActivity : AppCompatActivity() {
         private inner class ListCalcViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             fun bind(item: Calc) {
                 val tv = itemView as TextView
-                val res = item.res
-                val sdf = SimpleDateFormat("dd/MM/yyy HH:mm", Locale("pt", "BR"))
+                val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale("pt", "BR"))
                 val data = sdf.format(item.createdDate)
+                val res = item.res
                 tv.text = getString(R.string.list_response, res, data)
 
             }
